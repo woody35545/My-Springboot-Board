@@ -7,15 +7,17 @@ import org.springframework.stereotype.Service;
 
 import java.util.List;
 
+// IOC
 @Service
 public class QuestionService {
     @Autowired
     QuestionRepository questionRepository;
 
-    public String getQuestionContent(){
-        List<Question> all = questionRepository.findAll();
-        Question res = all.get(0);
-        return res.getQuestionContent();
+    public List<Question> getAllQuestion(){
+        return questionRepository.findAll();
     }
 
+    public Question getQuestion(int id){
+        return questionRepository.findById(id).orElseThrow(() -> new IllegalArgumentException("no such data"));
+    }
 }

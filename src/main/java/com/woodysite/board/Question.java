@@ -11,6 +11,7 @@ import lombok.Getter;
 @Table(name = "question_table")
 public class Question {
     @Id
+    @Column(name="question_id")
     private int questionID;
 
     @Column(name="question_content")
