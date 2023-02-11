@@ -5,6 +5,7 @@ import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 
+import java.util.Iterator;
 import java.util.List;
 
 @SpringBootTest
@@ -14,9 +15,10 @@ class BoardApplicationTests {
 
 	@Test
 	void questionRepositoryTest(){
-		List<Question> all = this.questionRepository.findAll();
-		Question q0 = all.get(0);
-		//System.out.println(q0.getQuestionContent());
-		System.out.println(q0.getQuestionContent());
+		List <Question> allQuestions= this.questionRepository.findAll();
+		assertEquals(6, allQuestions.size()); ;
+		for (Question q : allQuestions){
+			System.out.println(q.getQuestionContent());
+		}
 	}
 }
