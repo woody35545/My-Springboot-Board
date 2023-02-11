@@ -16,8 +16,7 @@ class BoardApplicationTests {
 	void questionRepositoryTest(){
 		List<Question> all = this.questionRepository.findAll();
 		Question q0 = all.get(0);
+		//System.out.println(q0.getQuestionContent());
 		System.out.println(q0.getQuestionContent());
-		assertEqual
-
 	}
 }

@@ -13,7 +13,7 @@ public class Question {
     @Id
     private int questionID;
 
-    @Column(name="question_id")
+    @Column(name="question_content")
     private String questionContent;
 
     @Column(name="category")
