@@ -7,6 +7,7 @@ import org.springframework.web.bind.annotation.ResponseBody;
 @Controller
 public class QuestionController
 {
+
     @ResponseBody
     @GetMapping("/question/list")
     public String getQuestionList(){
