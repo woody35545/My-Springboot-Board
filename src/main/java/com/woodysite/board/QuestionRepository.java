@@ -1,5 +1,7 @@
 package com.woodysite.board;
 
-public class QuestionRepository extends JpaRepository<Question, int>{
+import org.springframework.data.jpa.repository.JpaRepository;
+
+public interface QuestionRepository extends JpaRepository<Question, Integer> {
 
 }
